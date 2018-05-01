@@ -37685,7 +37685,7 @@ exports.clearImmediate = typeof self !== "undefined" && self.clearImmediate || t
 /* 50 */
 /***/ (function(module, exports) {
 
-module.exports = {"networks":{"mainnet":{"contracts":{"_0xbitcointoken":{"name":"0xBitcoinToken","blockchain_address":"0xb6ed7644c69416d67b522e20bc294a9a9b405b31"},"microdex":{"name":"micro-dex","blockchain_address":"0x728325a626ef65b5ecff44310c6808b3736c686c"},"lavawallet":{"name":"lava-wallet","blockchain_address":"0x"}}},"ropsten":{"contracts":{"_0xbitcointoken":{"name":"0xBitcoinToken","blockchain_address":"0x9D2Cc383E677292ed87f63586086CfF62a009010"},"microdex":{"name":"micro-dex","blockchain_address":"0xC2236F1052199A43d6b7EF6C54b842A095a6B8E3"},"lavawallet":{"name":"lava-wallet","blockchain_address":"0x38d5665ec478e0340b46a062071a2694bbc0b451"}}}}}
+module.exports = {"networks":{"mainnet":{"contracts":{"_0xbitcointoken":{"name":"0xBitcoinToken","blockchain_address":"0xb6ed7644c69416d67b522e20bc294a9a9b405b31"},"microdex":{"name":"micro-dex","blockchain_address":"0x728325a626ef65b5ecff44310c6808b3736c686c"},"lavawallet":{"name":"lava-wallet","blockchain_address":"0x"}}},"ropsten":{"contracts":{"_0xbitcointoken":{"name":"0xBitcoinToken","blockchain_address":"0x9D2Cc383E677292ed87f63586086CfF62a009010"},"microdex":{"name":"micro-dex","blockchain_address":"0xC2236F1052199A43d6b7EF6C54b842A095a6B8E3"},"lavawallet":{"name":"lava-wallet","blockchain_address":"0xd53f047ceb0dc6cbaf6d09e877a7c3043caf9e7e"}}}}}
 
 /***/ }),
 /* 51 */
@@ -65014,7 +65014,7 @@ class LavaWalletHelper {
       name: 'expires',
       value: expires
     }, {
-      type: 'string',
+      type: 'uint256',
       name: 'nonce',
       value: nonce
     }];
@@ -65023,11 +65023,16 @@ class LavaWalletHelper {
 
     console.log('generateLavaTransaction', tokenAddress, amountRaw, transferRecipient);
 
+    //testing
+    var sigHash = sigUtil.typedSignatureHash(msgParams);
+
+    console.log('lava sigHash', msgParams, sigHash);
+
     var params = [msgParams, from];
 
-    var result = await this.signTypedData(params, from);
+    var signature = await this.signTypedData(params, from);
 
-    console.log('lava result', result);
+    console.log('lava signature', msgParams, signature);
   }
 
   async signTypedData(params, from) {
@@ -65047,6 +65052,7 @@ class LavaWalletHelper {
         if (result.error) return console.error(result);
         console.log('PERSONAL SIGNED:' + JSON.stringify(result.result));
 
+        //this method needs to be in solidity!
         const recovered = sigUtil.recoverTypedSignature({ data: params[0], sig: result.result });
 
         if (recovered === from) {
