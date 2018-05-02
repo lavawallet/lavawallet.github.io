@@ -64336,7 +64336,7 @@ class LavaWalletHelper {
 
     var contract = this.ethHelper.getWeb3ContractInstance(this.web3, this.lavaWalletContract.blockchain_address, lavaWalletABI.abi);
 
-    contract.transferTokensFromWithSignature.sendTransaction(lavaPacket.from, lavaPacket.to, lavaPacket.tokenAddress, lavaPacket.tokenAmount, lavaPacket.relayerReward, lavaPacket.expires, lavaPacket.nonce, lavaPacket.signature, function () {
+    contract.approveTokensWithSignature.sendTransaction(lavaPacket.from, lavaPacket.to, lavaPacket.tokenAddress, lavaPacket.tokenAmount, lavaPacket.relayerReward, lavaPacket.expires, lavaPacket.nonce, lavaPacket.signature, function () {
       console.log('done!');
     });
   }
