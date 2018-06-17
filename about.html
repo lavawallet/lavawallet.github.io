@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html  id="landing">
+	<head>
+		<title>Lava Wallet</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<link rel="icon" type="image/png" href="/app/assets/img/favicon.png" />
+
+
+	<link href="/assets/main.css" rel="stylesheet"></head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<img class=" " src="/app/assets/img/lavalogo5.png"></img>
+						</div>
+						<div class="about-content">
+							<div class="inner">
+								<h1>About Lava Wallet</h1>
+
+								<article id="intro">
+									<h2 class="major">Intro</h2>
+									 <p>LavaWallet is a <a href="http://etherscan.io/address/0x1bf797219482a29013d804ad96d1c6f84fba4c45" target="_blank">smart contract for Ethereum</a> which allows users to digitally sign data (a 'lava packet') offchain in order to allow other users to spend their ERC20 tokens which reside inside the smart contract.   </p>
+								</article>
+
+								<article>
+									<h2 class="major">Lava Packets</h2>
+									 <p>A lava packet is a small JSON file with 10 fields: From, To, WalletAddress, TokenAddress, TokenAmount, RelayerReward, Expires, Nonce, Method and Signature. The first 9 fields describe an ERC20 token transfer which the 'token sender' (the From field) wants to perform.  The 10th field, 'signature', is a special cryptographic signature that only the 'token sender' (From) can create, typically using Metamask.  Now that this signature exists, any other person may submit this 'lava packet' (which is very similar to a signed bank check) to the LavaWallet contract on the Ethereum Mainnet.  When they do this, they will recieve any tokens defined in 'RelayerReward' as compensation since they had to pay gas using ETH. </p>
+								</article>
+
+								<article>
+									<h2 class="major">Accepting Lava Packets</h2>
+									 <p>A lava packet can either be shared in a text file, or it can be broadcasted to a relayer. A relayer is simply a bot which automatically turns in lava packets.   In order to accept a lava packet file manually, just visit the <a href="http://lavawallet.io/wallet.html">Lava Wallet</a> and drag the file into the area at the bottom of the page.   </p>
+								</article>
+
+								<article>
+									<h2 class="major">Creating Lava Packets</h2>
+									 <p>A lava packet can be created using the web version of <a href="http://lavawallet.io/wallet.html">Lava Wallet</a>.  In the future, there will be javascript utilities for creating lava packets programatically inside of software.     </p>
+								</article>
+
+								<article>
+									<h2 class="major">Relaying Lava Packets</h2>
+									 <p>If you would like to relay lava packets, you will earn tokens in reward for paying small amounts of ETH.  A very small server, even a Raspberry PI computer is powerful enough to relay these packets using an Ethereum Light Client.  To get started, just clone or download the <a href="http://github.com/lavawallet/lava-relay-node" target="_blank">Lava Relay Node</a> software.  </p>
+								</article>
+
+							</div>
+						</div>
+						<nav>
+							<ul>
+								 <li class="color-white"><a href="/">Home</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">   Design: <a href="https://html5up.net">HTML5 UP</a>. Images: <a href="https://unsplash.com">UNSPLASH</a></p>
+				</footer>
+			</div>
+
+		<!-- BG -->
+			<div id="bg" class="about-bg"></div>
+
+		<!-- Scripts -->
+
+
+	<script type="text/javascript" src="/bundle.js"></script></body>
+</html>
