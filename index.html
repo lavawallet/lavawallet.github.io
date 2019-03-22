@@ -1,69 +1,226 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 
 
 
 
 
-
-<html id="landing">
-	<head>
-		<title>Lava Wallet</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
-		<link rel="icon" type="image/png" href="/app/assets/img/favicon.png" />
-
-
-	<link href="/assets/main.css" rel="stylesheet"></head>
-	<body  class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<img class=" " src="/app/assets/img/lavalogo5.png"></img>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Lava Wallet</h1>
-								<p class="color-white">Let relayers pay your Ethereum gas costs</p>
-
-							</div>
-						</div>
+<!DOCTYPE html>
+<html lang="en" >
 
 
 
-            <nav>
-							<ul>
-								<li class="color-white"><a href="/wallet.html">Modern Wallet</a></li>
-                <li class="color-white"><a href="/about.html">About</a></li>
-								<li class="color-white"><a href="/legacy.html">Legacy Wallet</a></li>
+  <head>
+    <meta charset="UTF-8">
+    <title>Lava Token</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../app/assets/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">   Design: <a href="https://html5up.net">HTML5 UP</a>. Images: <a href="https://unsplash.com">UNSPLASH</a></p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg" class="landing-bg"></div>
-
-		<!-- Scripts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-	<script type="text/javascript" src="/bundle.js"></script></body>
+     
+<link href="/app/assets/main.82baeca44501cba8a286.css" rel="stylesheet"></head>
+
+
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.js'></script>
+  <script>
+    window.addEventListener('resize', () => {
+    const divs = document.querySelectorAll(".menu-list");
+    if (window.innerWidth < 768){
+      divs.forEach(div => div.classList.add("tags"));
+    }
+    else {
+      divs.forEach(div => div.classList.remove("tags"));
+    }
+  });
+  </script>
+
+
+
+<!-- https://colorhunt.co/palette/138365 -->
+  <body>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="columns">
+          <div class="column is-12">
+            <div class="container content">
+
+
+              <img src="../app/assets/img/path3.png" />
+
+
+              <i class="is-size-3 fab fa-ethereum"></i>
+              <h1 class="title font-raleway"> Lava Token </h1>
+              <h3 class="subtitle">
+
+              </h3>
+
+              <div class="whitespace-md"></div>
+
+              <div class="pull-right">
+                <a href="https://github.com/lavawallet/lavawallet-desktop" target="_blank" class="button button-primary is-large">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Lava Wallet</span>
+                </a>
+
+                <a href="https://0xbitcoin.trade" target="_blank" class="button button-primary is-large">
+                  <span class="icon">
+                    <i class="fas fa-download"></i>
+                  </span>
+                  <span>Get LAVA</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-3">
+            <aside class="is-medium menu">
+          <p class="menu-label">
+            applications
+          </p>
+          <ul class="menu-list">
+            <li class="is-right"><a href="http://github.com/lavawallet/lavawallet-desktop" class="is-active"><i class="fab fa-js"></i> Wallet </a></li>
+            <li><a href="http://github.com/admazzola/lava-relay-node" class="is-active"><i class="fab fa-js"></i> Relays </a></li>
+            <li><a href="http://0xbitcoin.trade" class="is-active"><i class="fab fa-ethereum"></i> Uniswap </a></li>
+              </ul>
+
+          <p class="menu-label">
+            code
+          </p>
+          <ul class="menu-list">
+            <li class="is-right"><a href="http://github.com/admazzola/lava-packet-utils" class="is-active"><i class="fab fa-js"></i> LAVA Packet Utils </a></li>
+            <li><a href="https://etherscan.io/address/0xd89c37fd7c0fa3b107b7e4a8731dd3aaec488954" class="is-active"><i class="fab fa-ethereum"></i> LAVA Contract </a></li>
+      
+          </ul>
+
+            <!--   <p class="menu-label">
+                More to read...
+              </p>
+              <ul class="menu-list">
+                <li><span class="tag is-white is-medium">Lorem</span></li>
+                <li><span class="tag is-white is-medium">Ipsum</span></li>
+                <li><span class="tag is-white is-medium">Dolor</span></li>
+                <li><span class="tag is-white is-medium">Animi</span></li>
+                <li><span class="tag is-white is-medium">Eximi</span></li>
+                <li><span class="tag is-white is-medium">Nullius</span></li>
+                <li><span class="tag is-white is-medium">Oxipi</span></li>
+                <li><span class="tag is-white is-medium">Vultus</span></li>
+                <li><span class="tag is-white is-medium">Voluptatis</span></li>
+                <li><span class="tag is-white is-medium">Exomarphis</span></li>
+                <li><span class="tag is-white is-medium">Finimi</span></li>
+                <li><span class="tag is-white is-medium">Aenigma</span></li>
+                <li><span class="tag is-white is-medium">Arkham</span></li>
+                <li><span class="tag is-white is-medium">Blue</span></li>
+                <li><span class="tag is-white is-medium">Medium</span></li>
+              </ul>
+
+            -->
+
+
+            </aside>
+          </div>
+          <div class="column is-9">
+            <div class="content is-medium">
+          <h3 class="title is-3">  </h3>
+              <div class="box">
+                <h4 id="const" class="title is-3"> Zero-fee Transactions on Ethereum </h4>
+                <article class="message is-primary">
+                  <span class="icon has-text-primary">
+                  <i class="fab fa-js"></i>
+                  </span>
+                  <div class="message-body">
+                    Deploy a Lava Relay to facilitate ERC20 transactions for your users. <br> You can even set the fee to ZERO to allow users to pay you in LAVA at no cost.
+                  </div>
+                </article>
+
+
+              <div class="code-box">
+                  <a href="https://github.com/admazzola/lava-relay-node"> >> Learn how to deploy a Lava Relay</a>
+              </div>
+
+
+            </div>
+            <div class="box">
+              <h4 id="let" class="title is-3"> The Easiest Desktop Wallet. Ever</h4>
+              <article class="message is-primary">
+                <span class="icon has-text-primary">
+                  <i class="fas fa-info-circle"></i>
+                </span>
+                <div class="message-body">
+                  Receive and send LAVA (Zero ETH Fee!) using any Lava Relay.
+                </div>
+              </article>
+              <div class="code-box">
+                  <a href="https://github.com/lavawallet/lavawallet-desktop"> >> Download the Desktop Wallet </a>
+              </div>
+          </div>
+          <h3 class="title is-3"></h3>
+          <div class="box">
+            <h4 id="lorem" class="title is-4"> Trustless, Scarce Currency. Pure Mined with SHA3 PoW</h4>
+            <article class="message is-primary">
+              <span class="icon has-text-primary">
+                <i class="fas fa-info-circle"></i>
+              </span>
+              <div class="message-body">
+                Every LAVA token is pegged 1:1 with 0xBTC, the scarce & trustless pure-mined token.
+                <br> LAVA can be atomic-swapped with 0xBTC using an on-chain Ethereum method.
+              </div>
+            </article>
+
+            <div class="code-box">
+                <a href="https://0xbitcoin.org"> >> Learn about 0xBTC </a>
+            </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+<footer class="footer">
+<section class="section">
+  <div class="container">
+
+  </div>
+</section>
+<hr>
+<div class="columns is-mobile is-centered">
+  <div class="field is-grouped is-grouped-multiline">
+    <div class="control">
+      <div class="tags has-addons"><a class="tag is-link is-danger" >LAVA Token Network</a>
+      <span class="tag is-warning">MIT license</span>
+    </div>
+  </div>
+  <div class="control">
+
+  </div>
+</div>
+</div>
+
+</footer>
+
+
+
+
+
+<script type="text/javascript" src="/main.82baeca44501cba8a286.js"></script></body>
 </html>
