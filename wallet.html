@@ -341,7 +341,7 @@
                 </div>
               </div>
             </div>
-           
+
 
 
           </div>
@@ -352,7 +352,7 @@
             <div class="input-container padding-md">
             <div class="label">Transfer Tokens</div>
 
-              <p> Generate a signed Lava Transfer Message.  This message can be submitted to the Ethereum network by anyone, at which point the tokens will be transferred to the recipient's Lava Balance.  </p>
+              <p> Generate a signed Lava Transfer Message.  This message can be submitted to the Ethereum network by anyone, at which point the tokens will be transferred to the recipient's account.  </p>
 
 
               <div class="whitespace-sm"></div>
@@ -464,8 +464,8 @@
                 <tr >
                   <td class="has-text-centered"> Icon </td>
                   <td class="has-text-centered"> Name </td>
-                  <td class="has-text-centered"> Lava Balance </td>
-                  <td class="has-text-centered"> External Balance </td>
+                  <td class="has-text-centered"> Approved Balance </td>
+                  <td class="has-text-centered"> External Amount </td>
 
                 </tr>
               </thead>
@@ -473,7 +473,7 @@
               <tr    v-for="(item, index) in tokens.token_list" v-bind:data-tokenaddress="item.address" v-bind:class="{   'asset-row':true, 'acts-as-link':true, 'hover-shadow':true   } " >
                 <td class="row-cell has-text-centered icon-url"><img  v-bind:src="item.icon_url" height="42" width="42" ></img></td>
                 <td class="row-cell has-text-centered token-name">{{item.name}}</td>
-                <td class="row-cell has-text-centered"><div class=" token-balance">{{item.lava_balance_formatted}}</div> </td>
+                <td class="row-cell has-text-centered"><div class=" token-balance">{{item.approved_balance_formatted}}</div> </td>
                 <td class="row-cell has-text-centered"><div class="has-text-centered token-balance">{{item.wallet_balance_formatted}}</div>  </td>
 
               </tr>
@@ -525,10 +525,7 @@
      <div class="content has-text-centered">
        <p>
 
-         <div class="address-title has-text-centered" v-cloak>
-           King Relayer: {{ kingRelayeraddress }}
-         </div>
-
+         
          <div class="address-title has-text-centered" v-cloak>
            Lava Contract: {{ address }}
          </div>
