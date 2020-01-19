@@ -325,7 +325,7 @@
                 <div class="column">
                   <div class="form-group">
                       <input type="text" class="input input-short is-primary " v-model="approveTokenQuantity" placeholder="token amount">
-                      <div class="button is-primary btn-action-approve"> Approve </div>
+                      <div class="button is-primary btn-action-approve" v-on:click="actionApproveTokens"> Approve </div>
                   </div>
                 </div>
                 <div class="column">
@@ -370,7 +370,7 @@
                           <div class="label">Amount</div>
                           <input class="input input-short is-primary" v-model="transferTokenQuantity" placeholder="token amount">
                       </div>
-                      
+
                       <div class="form-group padding-md">
                           <div class="label">Recipient</div>
                           <input class="input is-primary" v-model="transferTokenRecipient" placeholder="token recipient">
@@ -394,7 +394,7 @@
                       </div>
 
                       <div class="whitespace-sm"></div>
-                        <div class="button is-primary btn-action-lava-transfer"> Sign </div>
+                        <div class="button is-primary btn-action-lava-transfer" v-on:click="actionLavaTransfer"> Sign </div>
 
                      </div>
                    <div class="column">
@@ -518,9 +518,9 @@
      <div class="content has-text-centered">
        <p>
 
-         
+
          <div class="address-title has-text-centered" v-cloak>
-           Lava Contract: {{ address }}
+         Lava Contract:    <a v-bind:href="etherscanURL" target="_blank"> {{ address }} </a>
          </div>
 
           <br>
