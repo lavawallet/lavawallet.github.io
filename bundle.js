@@ -75427,7 +75427,7 @@ module.exports = {"contractName":"LavaWallet","abi":[{"inputs":[{"name":"relayKi
 /* 239 */
 /***/ (function(module, exports) {
 
-module.exports = {"seedNodes":[{"address":"104.131.112.200:3000"}]}
+module.exports = {"seedNodes":[{"address":"//68.183.149.43:3000"}]}
 
 /***/ }),
 /* 240 */
