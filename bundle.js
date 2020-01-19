@@ -65738,7 +65738,7 @@ class LavaWalletHelper {
     var walletAddress = this.lavaWalletContract.blockchain_address;
     var from = this.web3.eth.accounts[0];
 
-    var relayAuthority = from; //for now
+    var relayAuthority = '0x0'; //for now
 
 
     var to = transferRecipient;
